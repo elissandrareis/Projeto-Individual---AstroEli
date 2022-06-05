@@ -18,7 +18,9 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff
+    
 }
+    
 
 [tabindex="-1"]:focus {
     outline: 0!important
@@ -4320,12 +4322,44 @@ input[type=button].btn-block {
     display: block
 }
 
+.imagem-circulo{
+    top: 5vh;
+    position: relative;
+    display: embedded block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;     
+}
+
+.imagem-circulo-fim{
+    display: embedded block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;     
+}
+
+.imagem-circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 .left-introducao{
     width: 100vw;
     height: 100%;
-    background:  linear-gradient( #2596be 100px,  #030407 50vh);
+    background:  linear-gradient( #004058 100px,  #030407 75vh);
     display: flex;
 }
+
+.corFooter{
+    width: 100vw;
+    height: 100%;
+    background:  linear-gradient( #434343 100px,  #030407 50vh);
+    display: flex;
+}
+
 
 .text-servico1 > label{
     font-size: 25px;
@@ -4453,6 +4487,15 @@ input[type=button].btn-block {
     display: flex;
     background-color: var(--white);
 }
+
+.footer{
+
+    height: 48vh;
+    flex-direction: row;
+    display: flex;
+    background-color: var(--white);
+}
+
 .introducao-div1{
     background-color: var(--white);
     height: 45vh;
