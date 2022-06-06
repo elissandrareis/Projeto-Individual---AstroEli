@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Of Signos</title>
+</head>
+
+<body>
+
+    <h2>Game of Signos!!</h2>
+
+    <select  id="frases">
+
+        <option value="Aries">corajoso e impulsivo</option>
+        <option value="Touro">perseverante e vaidoso</option>
+        <option value="Gemeos">comunicativo e agitado</option>
+        <option value="Cancer">afetuoso e protetor</option>
+        <option value="Leao">confiante e magnético</option>
+        <option value="Virgem">prático e inteligente</option>
+        <option value="Libra">justiceiro e pacifico</option>
+        <option value="Escorpiao">intenso e briguento</option>
+        <option value="Sagitario">determinado e livre</option>
+        <option value="Capricornio">responsável e trabalhador</option>
+        <option value="Aquario">inovador e original</option>
+        <option value="Peixes">intuitivo e sensível</option>
+
+    </select>
+
+    <!-- Qual é o signo mais intuitivo e sensível?
+    <input type="text" id="Peixes" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais corajoso e impulsivo?
+    <input type="text" id="Aries" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais perseverante e vaidoso?
+    <input type="text" id="Touro" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais comunicativo e agitado?
+    <input type="text" id="Gemeos" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais afetuoso e protetor?
+    <input type="text" id="Cancer" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais confiante e magnético?
+    <input type="text" id="Leao" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais prático e inteligente?
+    <input type="text" id="Virgem" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais justiceiro e pacifico?
+    <input type="text" id="Libra" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais intenso e briguento?
+    <input type="text" id="Escorpiao" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais determinado e livre?
+    <input type="text" id="Sagitario" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais responsável e trabalhador?
+    <input type="text" id="Capricornio" placeholder="Insira aqui sua resposta"><br><br>
+
+    Qual é o signo mais inovador e original?
+    <input type="text" id="Aquario" placeholder="Insira aqui sua resposta"><br><br> -->
+
+    <button onclick="resposta()">Resposta</button>
+    <div id="mostrar"></div>
+
+</body>
+
+</html>
+<script>
+
+    var astros = ["Aries", "Touro", "Gemeos", "Cancer", "Leão", "Virgem",
+        "Libra", "Escorpião", "Sagitário", "Capricornio", "Aquario", "Peixes",]
+
+    function resposta() {
+
+        astros.push(Number(frases.value))
+        frases.value = '';
+
+        var pontos = 5;
+
+        for (var index = 5; index < astros.length; index++) {
+
+
+            pontos+= astros[index]
+            
+    
+        if (astros.indexOf(Peixes) == -1) {
+
+            mostrar.innerHTML = `O signo mais intuitivo e sensível é ${Peixes} você acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Aries) == -1) {
+
+            mostrar.innerHTML = `O signo mais corajoso e impulsivo é ${Aries} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Touro) == -1) {
+
+            mostrar.innerHTML = `O signo mais perseverante e vaidoso é ${Touro} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Gemeos) == -1) {
+
+            mostrar.innerHTML = `O signo mais comunicativo e agitado é ${Gemeos} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Cancer) == -1) {
+
+            mostrar.innerHTML = `O signo mais afetuoso e protetor é ${Cancer} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Leao) == -1) {
+
+            mostrar.innerHTML = `O signo mais confiante e magnético é ${Leao} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Virgem) == -1) {
+
+            mostrar.innerHTML = `O signo mais prático e inteligente é ${Virgem} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Libra) == -1) {
+
+            mostrar.innerHTML = `O signo mais justiceiro e pacifico é ${Libra} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Escorpiao) == -1) {
+
+            mostrar.innerHTML = `O signo mais intenso e briguento é ${Escorpiao} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Sagitario) == -1) {
+
+            mostrar.innerHTML = `O signo mais determinado e livre é ${Sagitario} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Capricornio) == -1) {
+
+            mostrar.innerHTML = `O signo mais responsável e trabalhador é ${Capricornio} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+        if (astros.indexOf(Aquario) == -1) {
+
+            mostrar.innerHTML = `O signo mais inovador e original é ${Aquario} voce acertou!!`
+
+        } else {
+            mostrar.innerHTML = `Ops você errou!! :(`
+        }
+
+    }
+
+    }
+
+</script>
