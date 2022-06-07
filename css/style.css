@@ -4346,6 +4346,21 @@ input[type=button].btn-block {
     object-fit: cover;
   }
 
+
+.my-slider-progress {
+    background: #ccc;
+}
+  
+.my-slider-progress-bar {
+    background: greenyellow;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
+}
+
+
+
+
 .left-introducao{
     width: 100vw;
     height: 100%;
@@ -4365,6 +4380,35 @@ input[type=button].btn-block {
     font-size: 25px;
     font-weight: 500;
     color: var(--grey);
+}
+
+.footer-contatos > label{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--grey);
+}
+
+.footer-contato > label{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--grey);
+}
+
+.footer-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 18vw;
+    position: absolute;
+    margin-left: 41%;
+    margin-top: -30px;
+    background-color: var(--black1);
+    border: 10vh;
+    border-color: #222;
+    box-shadow: 0px 10px 10px var(--black1);
+    position: relative;
+    top: 65vh;
 }
 
 .text-servico1{
