@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+
+</head>
+<body>
+    <main>
+        <section id="login">
+
+            <div id="formulario">
+                <div class="alerta_erro">
+                    <div class="card_erro" id="cardErro">
+                        <span id="mensagem_erro"></span>
+                    </div>
+                </div>
+                <h1 id="h1Jogar" style=" position: relative; top: 10vh;">Vamos Jogar?</h1>
+
+                <button id="btnJogar" class="bn3637 bn36" onclick="jogar()">Começar</button>
+
+
+                <div id="startGame" style="position: relative; display: none; text-align: center; top: 30vh;">
+                    <h2>Pergunta <b id="numPerguntas">0</b></h2>
+                    <br><br><br>
+                    <h4>Pontos: </h4> <b id="idPonto">0</b>
+                    <br>
+
+                    <div id="pergunta1">
+                        <span id="Peguntas">Signo: Corajoso e Impulsivo</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao1" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Escorpiao</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Sagitario</option>
+                                <option value="4">Aries</option>
+                            </select>
+
+                            <br><br>    
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+
+                    <div id="pergunta2" style="display: none;">
+                        <span id="Peguntas">Signo: Perseverante e Vaidoso</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao2" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Escorpiao</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Touro</option>
+                                <option value="4">Aries</option>
+                            </select>
+
+                            <br><br>    
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+
+                    
+                    <div id="pergunta3" style="display: none;">
+                        <span id="Peguntas">Signo: Comunicativo e Agitado</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao3" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Gemeos</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Sagitario</option>
+                                <option value="4">Aries</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta4" style="display: none;">
+                        <span id="Peguntas">Signo: Afetuoso e Protetor</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao4" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Escorpiao</option>
+                                <option value="2">Cancer</option>
+                                <option value="3">Sagitario</option>
+                                <option value="4">Aries</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta5" style="display: none;">
+                        <span id="Peguntas">Signo: Confiante e Magnético</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao5" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Escorpiao</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Sagitario</option>
+                                <option value="4">Leao</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta6" style="display: none;">
+                        <span id="Peguntas">Signo: Prático e Inteligente</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao6" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Escorpiao</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Sagitario</option>
+                                <option value="4">Aries</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta7" style="display: none;">
+                        <span id="Peguntas">Signo: Justiceiro e Pacifico</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao7" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Libra</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Sagitario</option>
+                                <option value="4">Aries</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta8" style="display: none;">
+                        <span id="Peguntas">Signo: Intenso e Briguento</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao8" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Escorpiao</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Escorpiao</option>
+                                <option value="4">Aries</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta9" style="display: none;">
+                        <span id="Peguntas">Signo: Determinado e Livre</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao9" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Sagitario</option>
+                                <option value="2">Aquario</option>
+                                <option value="3">Escorpiao</option>
+                                <option value="4">Aries</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta10" style="display: none;">
+                        <span id="Peguntas">Signo: Responsável e Trabalhador</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao10" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Aquario</option>
+                                <option value="2">Capricornio</option>
+                                <option value="3">Aries</option>
+                                <option value="4">Escorpiao</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta11" style="display: none;">
+                        <span id="Peguntas">Signo: Inovador e Original</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao11" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Escorpiao</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Aquario</option>
+                                <option value="4">Aries</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+                    
+                    <div id="pergunta12" style="display: none;">
+                        <span id="Peguntas">Signo: Intuitivo e Sensível</span>
+                        <br><br>
+                        <span>
+
+                            <select id="select_Questao12" onchange="pontos()">
+                                <option value="0">--Selecione a Pergunta</option>
+                                <option value="1">Aquario</option>
+                                <option value="2">Virgem</option>
+                                <option value="3">Peixes</option>
+                                <option value="4">Escorpiao</option>
+                            </select>
+                            <br><br>
+
+                            <h6 id="msgPontos0" style="display: none;">Voce ja esta com 0 pontos, que ruuiiimmmm!!</h6>
+                        </span>
+
+                    </div>
+
+
+ 
+
+                    <div id="final" style="display: none;">
+                            <h4>Obrigado por jogar</h4>
+                            <span>Sua pontuação foi: <b id="finalPontucao">0</b>
+                            </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+<script>
+    var Perguntas = numPerguntas.innerHTML;
+    var pontuacao = idPonto.innerHTML;
+
+    var arryPontos = []
+
+    function jogar() {
+        h1Jogar.style.display = 'none';
+        btnJogar.style.display = 'none';
+        startGame.style.display = 'block';
+    }
+
+    function pontos() {
+
+        var questao1 = select_Questao1.value;
+        var questao2 = select_Questao2.value;
+        var questao3 = select_Questao3.value;
+        var questao4 = select_Questao4.value;
+        var questao5 = select_Questao5.value;
+        var questao6 = select_Questao6.value;
+        var questao7 = select_Questao7.value;
+        var questao8 = select_Questao8.value;
+        var questao9 = select_Questao9.value;
+        var questao10 = select_Questao10.value;
+        var questao11 = select_Questao11.value;
+        var questao12 = select_Questao12.value;
+
+        var contador = 5
+        
+
+        if (questao1 == 4) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta1.style.display = 'none';
+            pergunta2.style.display = 'block';
+            arryPontos.push(questao1)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+        } 
+
+        if (questao2 == 3) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta2.style.display = 'none';
+            pergunta3.style.display = 'block';
+            arryPontos.push(questao2)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+        if (questao3 == 1) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta3.style.display = 'none';
+            pergunta4.style.display = 'block';
+            arryPontos.push(questao3)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+        if (questao4 == 2) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta4.style.display = 'none';
+            pergunta5.style.display = 'block';
+            arryPontos.push(questao4)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+
+        if (questao5 == 4) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta5.style.display = 'none';
+            pergunta6.style.display = 'block';
+            arryPontos.push(questao5)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+        
+        if (questao6 == 2) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta6.style.display = 'none';
+            pergunta7.style.display = 'block';
+            arryPontos.push(questao6)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+        if (questao7 == 1) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta7.style.display = 'none';
+            pergunta8.style.display = 'block';
+            arryPontos.push(questao7)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+
+        if (questao8 == 3) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta8.style.display = 'none';
+            pergunta9.style.display = 'block';
+            arryPontos.push(questao8)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+
+        if (questao9 == 1) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta9.style.display = 'none';
+            pergunta10.style.display = 'block';
+            arryPontos.push(questao9)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        }
+
+        if (questao10 == 2) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta10.style.display = 'none';
+            pergunta11.style.display = 'block';
+            arryPontos.push(questao10)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+
+        if (questao11 == 3) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta11.style.display = 'none';
+            pergunta12.style.display = 'block';
+            arryPontos.push(questao11)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+
+
+        } 
+        if (questao12 == 3) {
+            pontuacao = Number(pontuacao + 1)
+            Perguntas = Number(Perguntas + 1)
+            pergunta12.style.display = 'none';
+            final.style.display = 'block';
+            arryPontos.push(questao12)
+            idPonto.innerHTML = `${Number(pontuacao)}`
+            numPerguntas.innerHTML = `${Number(Perguntas)}`
+            finalPontucao.innerHTML = `${arryPontos}`
+
+        } 
+    }
+
+
+</script>

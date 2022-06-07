@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-login.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    <script src="js/funcoes.js"></script>
+
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+                <!-- Aqui vai a imagem nas CSS -->
+            </div>
+            <div id="formulario">
+                <div class="alerta_erro">
+                    <div class="card_erro" id="cardErro">
+                        <span id="mensagem_erro"></span>
+                    </div>
+                </div>
+                <h1>Login</h1>
+                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+                    <div class="campo">
+                        <i class="material-icons">email</i>
+                        <input type="email" id="ipt_email" placeholder="seu e-mail">
+                        <label for="ilogin">Login</label>
+                    </div>
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" id="ipt_senha" placeholder="sua senha">
+                        <label for="isenha">Senha</label>
+                    </div>
+                    <button class="botaozada" onclick="entrar()">Logar</button>
+                    <a href="index.html" class="botaozada">
+                        Sair
+                    </a>
+                    <p style="position: relative; top: -6px;"><b> Voce nao tem uma conta?</b> <a href="cadastro.html">Cadastre-se</a></p>
+
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="images/circle-loading.gif" id="loading-gif">
+                    </div>
+    
+                    <div id="div_erros_login">
+    
+                    </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+<script>
+
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "dashboard/index.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
